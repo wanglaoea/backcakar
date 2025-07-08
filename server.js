@@ -34,7 +34,7 @@ app.post('/generate', async (req, res) => {
 
         console.log(`[${new Date().toISOString()}] keyword diterima: ${keyword}`);
 
-        const prompt =`Tulis artikel SEO minimal 1000 kata tentang ${keyword} Dengan Struktur HTML. Buatlah Judul artikel seunik mungkin, Artikel harus informatif, engaging, dan menarik.
+        const prompt =`Tulis artikel SEO minimal 500 kata tentang ${keyword} Dengan Struktur HTML. Buatlah Judul artikel seunik mungkin, Artikel harus informatif, engaging, dan menarik.
 
             OUTPUT ARTIKEL:
             <h1>Judul Utama</h1>
@@ -76,7 +76,7 @@ app.post('/generate', async (req, res) => {
 
         console.log(`[${new Date().toISOString()}] Mengirim prompt ke OpenAI...`);
         const response = await openai.chat.completions.create({
-            model: "o4-mini",
+            model: "gpt-4o",
                    messages: [{ role: "user", 
                         content: prompt }]
         });

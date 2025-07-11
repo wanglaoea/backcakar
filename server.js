@@ -7,7 +7,7 @@ const app = express();
 app.use(express.json());
 
 app.use(cors({
-    origin: ['https://cakar-iota.vercel.app'],
+    origin: ['https://walaoe.vercel.app'],
     methods: ['POST']
 }));
 
